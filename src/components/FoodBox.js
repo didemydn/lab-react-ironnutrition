@@ -1,4 +1,3 @@
-import foods from "../foods.json";
 import { Card, Col, Button } from 'antd';
 
 function FoodBox({food}) {
