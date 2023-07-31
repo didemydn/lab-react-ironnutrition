@@ -1,6 +1,10 @@
 import { Card, Col, Button } from 'antd';
 
-function FoodBox({food}) {
+function FoodBox({food, onDelete}) {
+    const handleDelete = () => {
+        // Call the onDelete prop with the food's name to remove it from the list
+        onDelete(food.name);
+    };
     
     return (
       <Col>
@@ -14,7 +18,7 @@ function FoodBox({food}) {
           <p>
             <b>Total Calories: {food.calories} * {food.servings} </b> kcal
           </p>
-          <Button type="primary"> Delete </Button>
+          <Button type="primary" onClick={handleDelete}> Delete </Button>
         </Card>
       </Col>
     );

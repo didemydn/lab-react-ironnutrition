@@ -19,6 +19,12 @@ function AddFoodForm(props) {
         const newFood = { name, image, calories, servings };
      
         console.log("Submitted: ", newFood);
+        props.onAddFood(newFood);
+
+        setName("");
+        setImage("");
+        setCalories("");
+        setServings("");
       }
 
     return (
